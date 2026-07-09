@@ -22,7 +22,7 @@ const PROFILE = {
   email: "ronymalik.2604@gmail.com",
   githubUser: "your-github-handle",
   // PLACEHOLDER — put your image in /public and set the path, e.g. "/avatar.png"
-  avatarUrl: "public/logos/Rohan_Avatar.png",
+  avatarUrl: "https://github.com/rony-codes/Rohan-QA-Portfolio/blob/main/public/logos/Rohan_Avatar.png?raw=true",
 };
 
 const ABOUT = {
@@ -44,7 +44,7 @@ const EXPERIENCE = [
     id: "exp-01",
     logo: "HCJ",
     // PLACEHOLDER — put the logo in /public and set the path, e.g. "/logos/company-one.png"
-    logoUrl: "public/logos/hcj-logo.jpg",
+    logoUrl: "https://github.com/rony-codes/Rohan-QA-Portfolio/blob/main/public/logos/hcj-logo.jpg?raw=true",
     company: "The Honour Enterprise",
     tags: ["SaaS", "Hiring Plateform"],
     role: "Software QA Engineer",
@@ -766,7 +766,7 @@ export default function App() {
                 <div className="qp-card-media">
                   {/* PLACEHOLDER — swap for a real project screenshot: <img src="..." alt={p.title} /> */}
                   {/* <span>PROJECT SCREENSHOT{"\n"}PLACEHOLDER</span> */}
-                  <img src="public/logos/ShopSphere.png" alt="" />
+                  <img src="https://github.com/rony-codes/Rohan-QA-Portfolio/blob/main/public/logos/ShopSphere.png?raw=true" alt="" />
                   <div className="qp-status">
                     <span className="qp-status-dot" style={{ background: meta.color }} />
                     <span style={{ color: "#f3efe3" }}>{meta.label}</span>

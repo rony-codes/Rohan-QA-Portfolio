@@ -18,9 +18,9 @@ const PROFILE = {
   name: "Rohan",
   role: "QA Engineer",
   tagline: "Breaking things on purpose, so nobody else has to.",
-  mastodon: "https://github.com/rony-codes",
+  github: "https://github.com/rony-codes",
   email: "ronymalik.2604@gmail.com",
-  githubUser: "your-github-handle",
+  githubUser: "https://github.com/rony-codes",
   // PLACEHOLDER — put your image in /public and set the path, e.g. "/avatar.png"
   avatarUrl: "https://github.com/rony-codes/Rohan-QA-Portfolio/blob/main/public/logos/Rohan_Avatar.png?raw=true",
 };
@@ -681,9 +681,9 @@ export default function App() {
           <div className="qp-role qp-mono">{PROFILE.role}</div>
           <div className="qp-tagline">{PROFILE.tagline}</div>
           <div className="qp-contacts">
-            <a className="qp-contact" href={`mailto:${PROFILE.mastodon}`}>
-              <AtSign size={15} color="#8fc4c0" />
-              <span>{PROFILE.mastodon}</span>
+            <a className="qp-contact" href={`mailto:${PROFILE.github}`}>
+              <Github size={15} color="#8fc4c0" />
+              <span>{PROFILE.github}</span>
             </a>
             <a className="qp-contact" href={`mailto:${PROFILE.email}`}>
               <Mail size={15} color="#8fc4c0" />

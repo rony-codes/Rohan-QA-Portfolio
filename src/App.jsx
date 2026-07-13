@@ -49,7 +49,7 @@ const EXPERIENCE = [
     logoUrl: "https://github.com/rony-codes/Rohan-QA-Portfolio/blob/main/public/logos/hcj-logo.jpg?raw=true",
     company: "The Honour Enterprise",
     tags: ["SaaS", "Hiring Plateform"],
-    role: "Software QA Engineer",
+    role: "Software QA Engineer [INTERN]",
     dates: "Jun 2026 — Present",
     description:
       "Ensuring quality across a recruitment platform connecting 6,000+ students and 60+ companies through job fairs, applications, and hiring workflows.",

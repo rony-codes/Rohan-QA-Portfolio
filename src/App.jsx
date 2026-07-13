@@ -8,6 +8,7 @@ import {
   Menu,
   X,
   Briefcase,
+  Linkedin,
 } from "lucide-react";
 
 /* ------------------------------------------------------------------
@@ -21,6 +22,7 @@ const PROFILE = {
   github: "https://github.com/rony-codes",
   email: "ronymalik.2604@gmail.com",
   githubUser: "https://github.com/rony-codes",
+  linkedin: "https://www.linkedin.com/in/rohan-kumar-70b8b2255/",
   // PLACEHOLDER — put your image in /public and set the path, e.g. "/avatar.png"
   avatarUrl: "https://github.com/rony-codes/Rohan-QA-Portfolio/blob/main/public/logos/Rohan_Avatar.png?raw=true",
 };
@@ -481,7 +483,28 @@ export default function App() {
         .qp-name { font-size: 40px; margin: 20px 0 4px; }
         .qp-role { color: var(--dusk); font-size: 16px; margin-bottom: 4px; }
         .qp-tagline { color: var(--twilight); font-size: 14px; font-style: italic; margin-bottom: 18px; max-width: 420px; }
-        .qp-contacts { display: flex; flex-direction: column; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; }
+        .qp-contacts { display: flex; align-items: center; justify-content: center; gap: 18px; }
+        .qp-icon-link {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 50%;
+  background: rgba(23, 211, 195, 0.08);
+  color: var(--mist);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+.qp-icon-link:hover {
+  background: var(--mist);
+  color: var(--card);
+  transform: translateY(-3px);
+}
+.qp-icon-tooltip {
+  position: absolute; bottom: -26px; left: 50%; transform: translateX(-50%);
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+  color: var(--dusk); white-space: nowrap;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.qp-icon-link:hover .qp-icon-tooltip { opacity: 1; }
         .qp-contact { display: flex; align-items: center; gap: 8px; color: var(--ink); text-decoration: none; }
         .qp-contact span { color: var(--mist); border-bottom: 1px solid transparent; transition: border-color 0.25s ease, color 0.25s ease; }
         .qp-contact:hover span { border-color: var(--mist); color: #3f8f89; }
@@ -681,13 +704,17 @@ export default function App() {
           <div className="qp-role qp-mono">{PROFILE.role}</div>
           <div className="qp-tagline">{PROFILE.tagline}</div>
           <div className="qp-contacts">
-            <a className="qp-contact" href={`mailto:${PROFILE.github}`}>
-              <Github size={15} color="#8fc4c0" />
-              <span>{PROFILE.github}</span>
+            <a className="qp-icon-link" href={PROFILE.github} target="_blank" rel="noreferrer">
+              <Github size={20} />
+              <span className="qp-icon-tooltip">GitHub</span>
             </a>
-            <a className="qp-contact" href={`mailto:${PROFILE.email}`}>
-              <Mail size={15} color="#8fc4c0" />
-              <span>{PROFILE.email}</span>
+            <a className="qp-icon-link" href={PROFILE.linkedin} target="_blank" rel="noreferrer">
+              <Linkedin size={20} />
+              <span className="qp-icon-tooltip">LinkedIn</span>
+            </a>
+            <a className="qp-icon-link" href={`mailto:${PROFILE.email}`}>
+              <Mail size={20} />
+              <span className="qp-icon-tooltip">Email</span>
             </a>
           </div>
         </div>
